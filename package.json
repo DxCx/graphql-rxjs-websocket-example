@@ -1,0 +1,19 @@
+{
+  "name": "graphql-rxjs-websocket-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^0.10.5",
+    "graphql-rxjs": "file:../graphql-rxjs/graphql-rxjs-0.10.5-0.tgz",
+    "graphql-tools": "^1.1.0",
+    "rxjs": "^5.4.2",
+    "subscriptions-transport-ws": "^0.8.1"
+  }
+}
