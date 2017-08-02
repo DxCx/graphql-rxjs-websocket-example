@@ -1,14 +1,13 @@
 {
-  "name": "graphql-rxjs-websocket-test",
-  "version": "1.0.0",
-  "description": "",
+  "name": "graphql-rxjs-websocket-example",
+  "version": "0.0.1",
+  "description": "Example that shows integration between graphql-rxhs & websocket transport",
   "main": "index.js",
   "scripts": {
-    "start": "node src/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/main.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Hagai Cohen <hagai.co@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "apollo-server-express": "^1.0.5",
     "body-parser": "^1.17.2",
@@ -18,5 +17,13 @@
     "graphql-tools": "^1.1.0",
     "rxjs": "^5.4.2",
     "subscriptions-transport-ws": "^0.8.2"
+  },
+  "homepage": "https://github.com/DxCx/graphql-rxjs-websocket-example",
+  "bugs": {
+    "url": "https://github.com/DxCx/graphql-rxjs-websocket-example/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/DxCx/graphql-rxjs-websocket-example.git"
   }
 }

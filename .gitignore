@@ -1,5 +1,6 @@
 *
 !*.json
+!yarn.lock
 !src/
 !src/**/*.js
 !.gitignore
