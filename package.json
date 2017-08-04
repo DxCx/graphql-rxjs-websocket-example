@@ -13,7 +13,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "graphql": "^0.10.5",
-    "graphql-rxjs": "^0.10.5-0",
+    "graphql-rxjs": "^0.10.5-2",
     "graphql-tools": "^1.1.0",
     "rxjs": "^5.4.2",
     "subscriptions-transport-ws": "^0.8.2"
