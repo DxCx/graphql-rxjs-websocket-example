@@ -207,9 +207,9 @@ fresh@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.0.tgz#f474ca5e6a9246d6fd8e0953cfa9b9c805afa78e"
 
-graphql-rxjs@^0.10.5-0:
-  version "0.10.5-0"
-  resolved "https://registry.yarnpkg.com/graphql-rxjs/-/graphql-rxjs-0.10.5-0.tgz#6191bb397137608250391dd169f69624b16283f8"
+graphql-rxjs@^0.10.5-2:
+  version "0.10.5-2"
+  resolved "https://registry.yarnpkg.com/graphql-rxjs/-/graphql-rxjs-0.10.5-2.tgz#18d0b981dfbe1d69ad68bb1779fd7075c9f8866e"
   optionalDependencies:
     "@types/graphql" "^0.10.1"
 

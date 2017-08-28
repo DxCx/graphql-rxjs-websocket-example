@@ -5,6 +5,7 @@ const typeDefs = `
 # Root Subscription
 type Query {
   someLiveInt: Int
+  slowInt: Int
   simpleInt: Int
 }
 
@@ -16,7 +17,12 @@ type Subscription {
 const resolvers = {
   Query: {
     someLiveInt(root, args, ctx) {
-      return Observable.interval(100);
+      return Observable.interval(1000);
+    },
+    slowInt(root, args, ctx) {
+      return new Promise(resolve => {
+        setTimeout(() => resolve(1), 5000);
+      });
     },
     simpleInt(root, args, ctx) {
       return 10;
@@ -32,6 +38,7 @@ const resolvers = {
 module.exports = {
   schema: makeExecutableSchema({typeDefs, resolvers}),
   rootValue: {
+    // Used for subscription's subscribe
     clock: Observable.interval(1000).shareReplay(1),
   }
 };

@@ -9,6 +9,11 @@ const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const express = require('express');
 const { rootValue, schema } = require('./my-schema');
 
+const GRAPHIQL_DEFAULT_QUERY = `query {
+  slowInt @defer
+  simpleInt
+}`;
+
 const WS_PORT = 5000;
 // TOOGLE This to switch to hybrid mode (Http + Ws)
 const HYBRID = false;
@@ -26,10 +31,12 @@ if ( HYBRID ) {
   app.use('/graphiql', graphiqlExpress({
     endpointURL: `/graphql`,
     subscriptionsEndpoint: `ws://localhost:${WS_PORT}/graphql`,
+    query: GRAPHIQL_DEFAULT_QUERY
   }));
 
   app.use('/graphiql-plain', graphiqlExpress({
     endpointURL: `/graphql`,
+    query: GRAPHIQL_DEFAULT_QUERY
   }));
 
   graphiqlWs = '/graphiql-full';
@@ -38,6 +45,7 @@ if ( HYBRID ) {
 app.use(graphiqlWs, graphiqlExpress({
   endpointURL: `ws://localhost:${WS_PORT}/graphql`,
   subscriptionsEndpoint: `ws://localhost:${WS_PORT}/graphql`,
+  query: GRAPHIQL_DEFAULT_QUERY
 }));
 
 // Set up schema for GraphQL-RxJs
@@ -58,5 +66,5 @@ const server = app.listen(WS_PORT, () => {
     }
   );
 
-  console.log(`Websocket Server is now running on http://localhost:${WS_PORT}`);
+  console.log(`Websocket Server is now running on http://localhost:${WS_PORT}${graphiqlWs}`);
 });
