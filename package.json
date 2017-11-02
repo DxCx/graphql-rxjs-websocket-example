@@ -1,7 +1,7 @@
 {
   "name": "graphql-rxjs-websocket-example",
   "version": "0.0.1",
-  "description": "Example that shows integration between graphql-rxhs & websocket transport",
+  "description": "Example that shows integration between graphql-rxjs & websocket transport",
   "main": "index.js",
   "scripts": {
     "start": "node src/main.js"
